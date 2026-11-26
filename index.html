@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skyline Guest House | Riviera Park, Mafikeng</title>
+<meta name="description" content="Self-contained rooms in Riviera Park, Mafikeng. Day rest from R300, nights from R450, family room R700. Call or WhatsApp to book.">
+<style>
+:root{--navy:#14213d;--navy2:#1c2f57;--gold:#e0a84a;--cream:#faf6ee;--ink:#222;--muted:#6b7280}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Helvetica Neue',Arial,sans-serif;line-height:1.65}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font-family:inherit}
+.demo{background:var(--gold);color:#1b1405;text-align:center;font-size:11px;letter-spacing:2px;padding:5px;font-weight:700}
+nav{position:fixed;top:24px;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;transition:.3s;color:#fff}
+nav.solid{top:0;background:rgba(20,33,61,.96);padding:12px 20px}
+.logo{font-family:Georgia,serif;font-size:19px;letter-spacing:1px}
+.logo span{color:var(--gold)}
+.links{display:flex;gap:18px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;align-items:center}
+.links .hide{display:none}
+@media(min-width:780px){.links .hide{display:inline}}
+.btn{display:inline-block;padding:14px 28px;border:1px solid var(--gold);background:var(--gold);color:#1b1405;letter-spacing:1.5px;font-size:13px;text-transform:uppercase;font-weight:700;cursor:pointer}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.btn.dark{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn.sm{padding:9px 18px;font-size:12px}
+.hero{height:100vh;height:100svh;min-height:540px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:#222 url('hero.jpg') center/cover no-repeat}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,16,32,.6),rgba(10,16,32,.45) 50%,rgba(10,16,32,.78))}
+.hero .in{position:relative;padding:0 22px;max-width:740px}
+.hero small{letter-spacing:5px;font-size:12px;text-transform:uppercase;color:#f5d9a5}
+.hero h1{font-size:44px;line-height:1.08;margin:12px 0 14px}
+.hero p{font-size:16px;opacity:.94;margin-bottom:26px}
+.hero .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.scroll{position:absolute;bottom:18px;left:0;right:0;text-align:center;font-size:12px;letter-spacing:3px;opacity:.8;animation:bob 1.8s infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+.rates{background:var(--navy);color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));text-align:center}
+.rates div{padding:18px 10px;border-right:1px solid #2a3d68}
+.rates b{display:block;font-family:Georgia,serif;font-size:24px;color:var(--gold);font-weight:400}
+.rates span{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#c9d3ea}
+section{padding:66px 20px}
+.wrap{max-width:1000px;margin:auto}
+.eyebrow{text-align:center;color:#b07d1c;letter-spacing:4px;font-size:12px;text-transform:uppercase}
+h2{text-align:center;font-size:32px;margin:6px 0 14px}
+.lead{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 34px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.f{background:#fff;text-align:center;padding:22px 10px;border-radius:4px;box-shadow:0 4px 16px rgba(0,0,0,.05);font-size:14px}
+.f i{display:block;font-style:normal;font-size:28px;margin-bottom:6px}
+.rooms{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.room{background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.07)}
+.room img{width:100%;height:230px;object-fit:cover;display:block;cursor:pointer}
+.room .b{padding:20px}
+.room h3{font-size:22px;margin-bottom:2px}
+.room p{font-size:14px;color:var(--muted);margin-bottom:12px}
+.price{font-family:Georgia,serif;font-size:26px;color:var(--navy);margin-bottom:12px}
+.price small{font-size:12px;color:var(--muted);font-family:Arial}
+.offers{background:var(--navy);color:#fff}
+.offers h2{color:#fff}.offers .lead{color:#c9d3ea}.offers .eyebrow{color:var(--gold)}
+.ogrid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.o{border:1px solid #2f4272;padding:26px;text-align:center;background:var(--navy2)}
+.o h3{font-size:22px;margin-bottom:4px}
+.o .big{font-family:Georgia,serif;font-size:34px;color:var(--gold);margin:8px 0}
+.o p{font-size:14px;color:#c9d3ea;margin-bottom:14px}
+.gal{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.gal img{width:100%;height:220px;object-fit:cover;display:block;cursor:pointer}
+.book{background:#efe6d3}
+.bwrap{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));max-width:900px;margin:auto}
+form{background:#fff;padding:22px}
+form label{display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+form input,form select,form textarea{width:100%;padding:12px;border:1px solid #d9cfba;background:#fffdf9;font-size:15px;margin-bottom:12px}
+form .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+form .btn{width:100%;text-align:center}
+.cinfo a.row,.cinfo div.row{display:flex;gap:14px;align-items:center;background:#fff;padding:16px;margin-bottom:12px}
+.cinfo .ic{font-size:22px}.cinfo b{display:block}.cinfo span{font-size:13px;color:var(--muted)}
+.map{width:100%;height:320px;border:0;margin-top:6px}
+footer{background:var(--navy);color:#b9c4de;text-align:center;padding:34px 20px 90px;font-size:13px}
+footer b{color:#fff;font-family:Georgia,serif;font-size:18px;font-weight:400}
+#fab{position:fixed;right:14px;bottom:16px;z-index:40;background:#1faa59;color:#fff;font-weight:700;padding:13px 18px;border-radius:30px;font-size:14px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:60;align-items:center;justify-content:center;padding:10px}
+#lb img{max-width:100%;max-height:100%}
+</style>
+</head>
+<body>
+<div class="demo">DEMO WEBSITE</div>
+
+<nav id="nav">
+  <a class="logo" href="#top">Skyline <span>Guest House</span></a>
+  <div class="links">
+    <a class="hide" href="#rooms">Rooms</a><a class="hide" href="#offers">Specials</a><a class="hide" href="#gallery">Gallery</a><a class="hide" href="#find">Find us</a>
+    <a class="btn sm" href="#book">Book</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="in">
+    <small>Riviera Park &middot; Mafikeng</small>
+    <h1>Skyline Guest House</h1>
+    <p>Comfortable self-contained rooms with a private bathroom, TV, fridge, microwave and free Wi-Fi.</p>
+    <div class="row">
+      <a class="btn" href="https://wa.me/27718105771?text=Hi%20Skyline%20Guest%20House%2C%20I%20would%20like%20to%20make%20a%20booking." target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn ghost" href="tel:+27718105771">Call 071 810 5771</a>
+    </div>
+  </div>
+  <div class="scroll">SCROLL &#8595;</div>
+</header>
+
+<div class="rates">
+  <div><b>R300</b><span>Day rest</span></div>
+  <div><b>R450</b><span>Night from</span></div>
+  <div><b>R700</b><span>Family room</span></div>
+  <div><b>R900</b><span>Weekend couple</span></div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">Welcome</div>
+    <h2>The best among the rest</h2>
+    <p class="lead">Skyline Guest House offers clean, comfortable, self-contained rooms in Riviera Park, Mafikeng. Whether you need a few hours of rest, a night away, a family stay or rooms for your work crew, we have an option for you.</p>
+    <div class="feat">
+      <div class="f"><i>&#128703;</i>Bathroom and toilet inside every room</div>
+      <div class="f"><i>&#128250;</i>TV</div>
+      <div class="f"><i>&#129482;</i>Fridge</div>
+      <div class="f"><i>&#9832;&#65039;</i>Microwave</div>
+      <div class="f"><i>&#128246;</i>Free Wi-Fi</div>
+    </div>
+  </div>
+</section>
+
+<section id="rooms" style="padding-top:10px">
+  <div class="wrap">
+    <div class="eyebrow">Rooms and rates</div>
+    <h2>Choose your stay</h2>
+    <p class="lead">All rooms are self-contained.</p>
+    <div class="rooms">
+      <div class="room">
+        <img src="twin.jpg" alt="Room with two single beds, TV and cupboard" onclick="openLb(this)">
+        <div class="b">
+          <h3>Day Rest</h3>
+          <p>Need a quiet place to rest during the day? Stay from 10am until 5pm.</p>
+          <div class="price">R300 <small>full day rest, 10am to 5pm</small></div>
+          <a class="btn sm dark" href="#book" onclick="setOpt('Day rest (R300)')">Book day rest</a>
+        </div>
+      </div>
+      <div class="room">
+        <img src="standard.jpg" alt="Comfortable bed with green headboard" onclick="openLb(this)">
+        <div class="b">
+          <h3>Self-Contained Room</h3>
+          <p>A comfortable room with a private bathroom, TV, fridge, microwave and free Wi-Fi.</p>
+          <div class="price">From R450 <small>per night</small></div>
+          <a class="btn sm dark" href="#book" onclick="setOpt('Room for the night (from R450)')">Book a night</a>
+        </div>
+      </div>
+      <div class="room">
+        <img src="hero.jpg" alt="Family room with two double beds" onclick="openLb(this)">
+        <div class="b">
+          <h3>Family Room</h3>
+          <p>Two double beds, with space for the whole family to stay together.</p>
+          <div class="price">R700 <small>per night</small></div>
+          <a class="btn sm dark" href="#book" onclick="setOpt('Family room (R700)')">Book family room</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offers" id="offers">
+  <div class="wrap">
+    <div class="eyebrow">Special offers</div>
+    <h2>Weekend and group rates</h2>
+    <p class="lead">Great value for couples, work crews and contractors.</p>
+    <div class="ogrid">
+      <div class="o">
+        <h3>Weekend Special</h3>
+        <div class="big">R900</div>
+        <p>For a couple, Friday to Sunday.</p>
+        <a class="btn sm" href="#book" onclick="setOpt('Weekend special (R900 per couple)')">Book weekend</a>
+      </div>
+      <div class="o">
+        <h3>Large Groups and Contractors</h3>
+        <div class="big">R200</div>
+        <p>Per person. Ask us about rooms for your team.</p>
+        <a class="btn sm" href="#book" onclick="setOpt('Group or contractors (R200 per person)')">Enquire</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="eyebrow">Gallery</div>
+    <h2>Take a look inside</h2>
+    <p class="lead">Tap a photo to enlarge it.</p>
+    <div class="gal">
+      <img src="hero.jpg" alt="Family room" onclick="openLb(this)">
+      <img src="standard.jpg" alt="Self-contained room" onclick="openLb(this)">
+      <img src="twin.jpg" alt="Twin room" onclick="openLb(this)">
+      <img src="bathroom.jpg" alt="Private bathroom with shower" onclick="openLb(this)">
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="eyebrow">Reservations</div>
+    <h2>Book your stay</h2>
+    <p class="lead">Send us your details and we will confirm availability on WhatsApp.</p>
+    <div class="bwrap">
+      <form onsubmit="sendBooking();return false">
+        <label>Your name</label><input id="bn" required>
+        <label>What would you like?</label>
+        <select id="bo">
+          <option>Day rest (R300)</option>
+          <option>Room for the night (from R450)</option>
+          <option>Family room (R700)</option>
+          <option>Weekend special (R900 per couple)</option>
+          <option>Group or contractors (R200 per person)</option>
+        </select>
+        <div class="two">
+          <div><label>Date</label><input id="bd" type="date"></div>
+          <div><label>Guests</label><input id="bg" type="number" min="1" value="2"></div>
+        </div>
+        <label>Message (optional)</label><textarea id="bm" rows="2"></textarea>
+        <button class="btn" type="submit">Send on WhatsApp</button>
+      </form>
+      <div class="cinfo">
+        <a class="row" href="https://wa.me/27718105771?text=Hi%20Skyline%20Guest%20House%2C%20I%20would%20like%20to%20make%20a%20booking." target="_blank" rel="noopener"><div class="ic">&#128172;</div><div><b>WhatsApp</b><span>071 810 5771</span></div></a>
+        <a class="row" href="tel:+27718105771"><div class="ic">&#128222;</div><div><b>Call</b><span>071 810 5771</span></div></a>
+        <a class="row" href="mailto:skylineguesthouse31@gmail.com?subject=Booking%20enquiry"><div class="ic">&#9993;&#65039;</div><div><b>Email</b><span>skylineguesthouse31@gmail.com</span></div></a>
+        <a class="row" href="https://www.facebook.com/search/top?q=Skyline%20guest%20house%20Mafikeng" target="_blank" rel="noopener"><div class="ic">&#128153;</div><div><b>Facebook</b><span>Skyline guest house</span></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <div class="eyebrow">Location</div>
+    <h2>Find us</h2>
+    <p class="lead">36 Pearl Street, Riviera Park, Mafikeng, 2745</p>
+    <iframe class="map" loading="lazy" title="Map to Skyline Guest House"
+      src="https://www.google.com/maps?q=36+Pearl+Street,+Riviera+Park,+Mafikeng,+2745,+South+Africa&output=embed"></iframe>
+    <div style="text-align:center;margin-top:16px">
+      <a class="btn dark sm" href="https://www.google.com/maps/search/?api=1&query=36+Pearl+Street+Riviera+Park+Mafikeng+2745" target="_blank" rel="noopener">Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>Skyline Guest House</b><br>36 Pearl Street, Riviera Park, Mafikeng 2745<br>071 810 5771 &middot; skylineguesthouse31@gmail.com<br><br>
+  Demo website designed by NovaWeb Atelier26
+</footer>
+
+<a id="fab" href="https://wa.me/27718105771?text=Hi%20Skyline%20Guest%20House%2C%20I%20would%20like%20to%20make%20a%20booking." target="_blank" rel="noopener">&#128172; Book on WhatsApp</a>
+<div id="lb" onclick="this.style.display='none'"><img id="lbimg" alt=""></div>
+
+<script>
+var nav=document.getElementById('nav');
+function onS(){nav.classList.toggle('solid',window.scrollY>60)}
+window.addEventListener('scroll',onS);onS();
+function openLb(el){document.getElementById('lbimg').src=el.src;document.getElementById('lb').style.display='flex'}
+function setOpt(t){var s=document.getElementById('bo');for(var i=0;i<s.options.length;i++){if(s.options[i].text===t){s.selectedIndex=i}}}
+function sendBooking(){
+  var m='Hi Skyline Guest House, I would like to book.\nName: '+document.getElementById('bn').value
+   +'\nOption: '+document.getElementById('bo').value
+   +'\nDate: '+(document.getElementById('bd').value||'not sure yet')
+   +'\nGuests: '+document.getElementById('bg').value
+   +(document.getElementById('bm').value?'\nMessage: '+document.getElementById('bm').value:'');
+  window.open('https://wa.me/27718105771?text='+encodeURIComponent(m),'_blank');
+}
+</script>
+</body>
+</html>
